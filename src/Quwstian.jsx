@@ -25,18 +25,18 @@ const Quwstian = ({ item, setResult, setCurItem, result, curItem }) => {
       ) : (
         <>
           <input
-            type="text"
             name={item.ques}
             onChange={(e) => {
               setResult({ ...result, [e.target.name]: e.target.value });
             }}
+            type = {item.type}
             className="border-2 rounded-lg"
             placeholder={item.ques}
             required
           />
         </>
       )}
-          <button onClick={() => setCurItem(() => curItem + 1)}>Next </button>
+          <button className="bg-red-400 px-5 p-1  rounded-md"  onClick={() => setCurItem(() => curItem + 1)}>Next </button>
 
     </div>
   );
